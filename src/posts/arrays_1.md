@@ -1,6 +1,7 @@
 ---
 title: Arrays for JavaScript beginners (Part 1)
 slug: arrays_1
+tags: ['JavaScript']
 date: 2019-01-10
 excerpt: Arrays are ordered collection of values. Each value is called an element and each element has a numeric position called index. Arrays in JavaScript are untyped meaning an array element may be of any data type...
 image_link: https://cdn-images-1.medium.com/max/800/1*gNIR8wq441K74W_DGtlZOQ.jpeg
