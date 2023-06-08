@@ -1,14 +1,40 @@
 ---
 import Search from '../components/Search.astro';
 import RootLayout from '../layouts/RootLayout.astro';
+
+const posts = await Astro.glob('../posts/*.md');
 ---
 
 <RootLayout title="Home">
 	<Search />
+	{
+		posts.map((post) => (
+			<div class="card">
+				<h1>{post.frontmatter.title}</h1>
+				<p>{post.frontmatter.excerpt}</p>
+				<a href="#" class="btn">
+					READ MORE
+				</a>
+			</div>
+		))
+	}
 </RootLayout>
 
 <style>
-	h1 {
-		font-family: var(--text-font);
+	.card {
+		width: 80%;
+		margin: 10px auto;
+		padding: 1rem;
+		border: 2px solid #333;
+		border-radius: 10px;
+	}
+
+	.card h1 {
+		font-family: var(--heading-font);
+		padding: 10px;
+	}
+	.card p {
+		font-family: var(--body-font);
+		padding: 10px;
 	}
 </style>
