@@ -33,6 +33,11 @@ a {
 	font-family: var(--meta-font);
 }
 
+.nav-bar {
+	display: flex;
+	justify-content: center;
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
 		background: #41295a; /* fallback for old browsers */
@@ -48,5 +53,11 @@ a {
 		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 		color: #fff;
+	}
+}
+
+@media (max-width: 800px) {
+	.nav-bar {
+		justify-content: space-between;
 	}
 }
