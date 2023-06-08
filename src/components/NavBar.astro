@@ -1,0 +1,30 @@
+---
+const links = ['home', 'about', 'reviews', 'contact'];
+---
+
+<nav>
+	<ul class="navbar">
+		{
+			links.map((link) => (
+				<li>
+					<a href={`/${link}`}>{link}</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<style>
+	.navbar {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+	}
+</style>
+
+<script>
+	const link = document.querySelectorAll('a');
+	link.forEach((link) =>
+		addEventListener('click', () => link.classList.add('active'))
+	);
+</script>
