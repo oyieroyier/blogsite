@@ -1,0 +1,52 @@
+---
+const socialIcons = [
+	'fa-linkedin',
+	'fa-github',
+	'fa-medium',
+	'fa-instagram',
+	'fa-twitter',
+];
+
+const socialLinks = [
+	'https://www.linkedin.com/in/boboyier/',
+	'https://github.com/oyieroyier',
+	'https://javascripture.medium.com/',
+	'https://www.instagram.com/boboyier/',
+	'https://twitter.com/arraydotmap',
+];
+---
+
+<footer>
+	<h3>let's connect</h3>
+
+	<div class="social-media">
+		{
+			socialIcons.map((icon, index) => (
+				<a href={socialLinks[index]} target="_blank">
+					<i class={`fa-brands ${icon}`} />
+				</a>
+			))
+		}
+	</div>
+</footer>
+
+<style>
+	footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	h3 {
+		font-family: var(--body-font);
+		font-weight: 300;
+		padding: 1rem;
+	}
+	i {
+		font-size: 2rem;
+		letter-spacing: 1rem;
+
+		&:hover {
+			color: #9380a7;
+		}
+	}
+</style>
