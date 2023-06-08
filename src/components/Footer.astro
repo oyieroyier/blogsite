@@ -14,6 +14,8 @@ const socialLinks = [
 	'https://www.instagram.com/boboyier/',
 	'https://twitter.com/arraydotmap',
 ];
+
+const date = new Date();
 ---
 
 <footer>
@@ -28,6 +30,10 @@ const socialLinks = [
 			))
 		}
 	</div>
+	<p>
+		&copy Oyier
+		{date.getFullYear()}
+	</p>
 </footer>
 
 <style>
@@ -48,5 +54,9 @@ const socialLinks = [
 		&:hover {
 			color: #9380a7;
 		}
+	}
+
+	p {
+		font-family: var(--meta-font);
 	}
 </style>
