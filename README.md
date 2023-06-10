@@ -1,6 +1,6 @@
 # PERSONAL BLOGSITE
 
-This is a Personal static blogsite I have made with Astro JS.
+This is a Personal blogsite I have made with AstroJS.
 
 ### Light Mode
 
