@@ -2,11 +2,11 @@
 
 This is a Personal blogsite I have made with AstroJS.
 
-### Light Mode
+### Light Mode (PC)
 
 ![](./readme-resources/lightmode.png)
 
-### Dark Mode
+### Dark Mode (PC)
 
 ![](./readme-resources/darkmode.png)
 
