@@ -15,16 +15,36 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--body-font);
 	font-size: 16px;
 	line-height: 1.5;
 	color: #333;
 }
 
-li {
-	list-style: none;
-	font-size: 2rem;
+h2 {
+	padding: 1rem;
 }
+li code,
+p code {
+	padding: 5px;
+	border-radius: 10px;
+	background-color: #6d6464;
+}
+
+li {
+	padding: 10px;
+}
+
+ol {
+	list-style-type: lower-roman;
+	width: 70%;
+	margin: 0 50px;
+}
+ul {
+	width: 70%;
+	margin: 0 50px;
+}
+
 a {
 	all: unset;
 	cursor: pointer;
@@ -36,6 +56,20 @@ a {
 	display: flex;
 	justify-content: center;
 }
+/* Each Blog Page */
+p {
+	font-size: 1.2rem;
+	line-height: 2rem;
+	letter-spacing: 2px;
+	padding: 10px;
+}
+
+.astro-code {
+	padding: 10px 20px;
+	margin: 1rem auto;
+	font-size: 1.5rem;
+	border-radius: 1rem;
+}
 
 /* Global button style */
 .btn {
@@ -44,7 +78,8 @@ a {
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-	background: #183153;
+	background-color: #183153;
+	color: #fff;
 	font-family: var(--meta-font);
 	font-weight: 600;
 	box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
@@ -54,20 +89,9 @@ a {
 	padding: 10px;
 }
 
-.btn:after {
-	content: ' ';
-	width: 0%;
-	height: 100%;
+.btn:hover {
+	color: #0e0313;
 	background: #ffd401;
-	position: absolute;
-	transition: all 0.4s ease-in-out;
-	right: 0;
-}
-
-.btn:hover::after {
-	right: auto;
-	left: 0;
-	width: 100%;
 }
 
 .btn span {
@@ -116,6 +140,9 @@ a {
 			#42265f
 		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+		color: #fff;
+	}
+	.btn {
 		color: #fff;
 	}
 }

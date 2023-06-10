@@ -2,7 +2,7 @@
 title: Arrays for JavaScript beginners (Part 1)
 slug: arrays_1
 tags: ['JavaScript']
-date: 2019-01-10
+date: 2023-06-07
 excerpt: Arrays are ordered collection of values. Each value is called an element and each element has a numeric position called index. Arrays in JavaScript are untyped meaning an array element may be of any data type...
 image_link: https://cdn-images-1.medium.com/max/800/1*gNIR8wq441K74W_DGtlZOQ.jpeg
 author: Bob Oyier
@@ -26,7 +26,7 @@ Arrays are just special objects. They are optimized to be accessed faster than o
 - The Array.from() method
 - The Array.of() method
 
-### Array literals.
+## i. Array literals.
 
 This is the simplest and most efficient way of creating an array. It is simply a comma-separated list of array elements within square brackets.
 
@@ -43,7 +43,7 @@ console.log(arr.indexOf(2)); // Element 2 is index 3.
 // There is no index 1 and 2 in this array.
 ```
 
-### The `…` Spread operator
+## ii. The `…` Spread operator
 
 The three dots "spread" an existing array so that its elements become elements within a new array literal.
 
@@ -72,7 +72,7 @@ const digits = [...'12345'];
 console.log(digits); // => ['1', '2', '3', '4', '5'
 ```
 
-### Array.of()
+## iii. Array.of()
 
 Since the Array() constructor cannot be invoked using a single numeric element (because it treats it as the length of an array), in comes Array.of()
 
@@ -91,7 +91,7 @@ const arr = Array.of(true, false, 'hello', 3.14);
 console.log(arr); // => [true, false, 'hello', 3.14]
 ```
 
-### Array.from()
+## iv. Array.from()
 
 It expects any iterable as its first argument.
 
@@ -108,11 +108,11 @@ const arr2 = Array.from(arr);
 console.log(arr2); // => ['a', 'b', 'c']
 ```
 
-### Array length in summary.
+## Array length in summary.
 
 An array will never have an element whose index is greater than or equal to the array length. If you assign a value to an array element whose index i is greater than or equal to the array length, the array's length is set to i + 1
 
-#### Using Array.length to manipulate arrays.
+## Using Array.length to manipulate arrays.
 
 Consider the following code:
 
@@ -123,7 +123,7 @@ console.log(nums.length); // => 7
 
 The following code snippets explain how one can use Array.length to manipulate the structure of the array.
 
-##### Truncating an array using array.length
+## Truncating an array using array.length
 
 ```js
 nums.length = 3;
@@ -131,7 +131,7 @@ console.log(nums); // => [1, 2, 3]
 // Destructively truncates the array to the specified length.
 ```
 
-##### Increasing the length of an array using array.length
+## Increasing the length of an array using array.length
 
 ```js
 nums.length = 10;
@@ -139,7 +139,7 @@ console.log(nums); // => [1, 2, 3, , , , , , , ]
 // Adds sparse areas to the tail end of the array.
 ```
 
-##### Delete all elements of an array using array.length
+## Delete all elements of an array using array.length
 
 ```js
 nums.length = 0;
@@ -147,7 +147,7 @@ console.log(nums); // => []
 // Deletes everything.
 ```
 
-### Adding and Deleting array elements.
+## Adding and Deleting array elements.
 
 Consider this empty array which we will build on to illustrate the following array methods:
 
@@ -155,7 +155,7 @@ Consider this empty array which we will build on to illustrate the following arr
 const arr = [];
 ```
 
-#### Array.push()
+## Array.push()
 
 This method adds one or more elements to the end of the array.
 
@@ -164,7 +164,7 @@ arr.push('a', 'b', 'c');
 console.log(arr); // => ['a', 'b', 'c']
 ```
 
-#### Array.unshift()
+## Array.unshift()
 
 This method adds one or more elements to the beginning of the array.
 
@@ -175,7 +175,7 @@ console.log(arr); // => ['d', 'e', 'a', 'b', 'c']
 
 This shifts the existing array elements to higher indexes.
 
-#### Array.pop()
+## Array.pop()
 
 This method removes the last element from the array and returns that element.
 
@@ -185,7 +185,7 @@ console.log(arr); // => ['d', 'e', 'a', 'b']
 console.log(popped); // => 'c'
 ```
 
-#### Array.shift()
+## Array.shift()
 
 This method removes the first element from the array and returns that element.
 
