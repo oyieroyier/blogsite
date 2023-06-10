@@ -1,0 +1,22 @@
+---
+import RootLayout from '../layouts/RootLayout.astro';
+
+export const getStaticPaths = async () => {
+	const posts = await Astro.glob('../posts/*.md');
+
+	return posts.map((post) => ({
+		params: {
+			slug: post.frontmatter.slug,
+		},
+		props: {
+			post,
+		},
+	}));
+};
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<RootLayout title={frontmatter.title}>
+	<Content />
+</RootLayout>

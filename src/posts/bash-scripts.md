@@ -1,5 +1,5 @@
 ---
-title: 6 Terminal/Bash aliases, functions and scripts I use to 10x my productivity
+title: 6 Bash aliases, functions and scripts I use to 10x my productivity
 slug: bash-scripts
 tags: ['Bash']
 excerpt: A terminal is a developer's best friend. A few keystrokes allow you to perform a swathe of actions such as creating hundreds of files and folders that would otherwise be cumbersome on a GUI...
